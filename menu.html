@@ -1,0 +1,28 @@
+<html>
+
+<head>
+  <title>
+    Menu
+  </title>
+  <script language="Javascript" type="text/javascript">
+    function getPage(choice) {
+      var page = choice.value;
+      if (page) {
+        window.location.href = page;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <form action="" name="Form1">
+    Select your favourite website:
+    <select name="Menuchoice" onchange="getPage(this)">
+      <option value="https://www.google.com">Google</option>
+      <option value="https://www.msbte.org.in">MSBTE</option>
+      <option value="https://www.yahoo.com">Yahoo</option>
+    </select>
+  </form>
+</body>
+
+</html>

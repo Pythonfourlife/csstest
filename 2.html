@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var reverseString = function (st) {
+            var newString = "";
+            for (let i = st.length - 1; i >= 0; i--) {
+                newString += st[i];
+            }
+            return newString;
+        }
+        var str = prompt("Enter a string: ");
+        const result = reverseString(str);
+        if (str == result) {
+            document.write("Yes it is palindrome ")
+        } else {
+            document.write("No  it is not a  palindrome ")
+        }
+    </script>
+</body>
+
+</html>

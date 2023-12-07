@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quantifiers Example</title>
+    <script>
+        function findMatches() {
+            const text = "aaabbaaaabbbaaaa";
+            const pattern = /a{2,4}b/g;
+            const matches = text.match(pattern);
+
+            const resultDiv = document.getElementById("results");
+
+            if (matches) {
+                resultDiv.innerHTML = "<p>Matches:</p>";
+                for (const match of matches) {
+                    resultDiv.innerHTML += "<p>" + match + "</p>";
+                }
+            } else {
+                resultDiv.innerHTML = "No matches found.";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Quantifiers Example</h2>
+    <button onclick="findMatches()">Find Matches</button>
+    <div id="results"></div>
+</body>
+
+</html>

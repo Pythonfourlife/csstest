@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>HTML Form</title>
+    <script>
+        function getPage(choice) {
+            const page = choice.value;
+            if (page) {
+                window.location.href = page;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="myform" action="" method="post">
+        Select Your Favorite Website:
+        <select name="MenuChoice" onchange="getPage(this)">
+            <option value="https://www.google.com">Google</option>
+            <option value="https://www.msbte.org.in">MSBTE</option>
+            <option value="https://www.yahoo.com">Yahoo</option>
+        </select>
+    </form>
+</body>
+
+</html>

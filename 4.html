@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Calculator</title>
+</head>
+
+<body>
+    <script>
+        // Predefined values
+        var num1 = parseFloat(prompt("Enter n1 "));
+        var operator = prompt("enter the operaotr ");
+        var num2 = parseFloat(prompt("Enter n2 "));
+        var result;
+
+        // Perform calculation based on the operator
+        switch (operator) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                result = num1 / num2;
+                break;
+            default:
+                document.write("Invalid operator.");
+        }
+
+        // Display the result
+        if (result) {
+            document.write(`Result: ${num1} ${operator} ${num2} = ${result}`);
+        }
+    </script>
+</body>
+
+</html>

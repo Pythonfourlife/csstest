@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function displaySelectedImage() {
+            // Get the select element
+            var select = document.getElementById("imageSelect");
+
+            // Get the selected option
+            var selectedOption = select.options[select.selectedIndex];
+
+            // Get the value (image URL) of the selected option
+            var imageUrl = selectedOption.value;
+
+            // Open a new window or tab to display the selected image
+            var newWindow = window.open(imageUrl, "Image Window", "width=400, height=400");
+        }
+    </script>
+</head>
+
+<body>
+    <select id="imageSelect">
+        <option value="1.png">Image 1</option>
+        <option value="2.png">Image 2</option>
+        <option value="3.png">Image 3</option>
+        <!-- Add more options with image URLs -->
+    </select>
+
+    <button onclick="displaySelectedImage()">Display Image</button>
+</body>
+
+</html>

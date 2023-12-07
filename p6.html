@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="myform">
+
+        <select name="op" id="">
+            <option value="1">kiwi</option>
+            <option value="2">banana</option>
+            <option value="3">apple</option>
+        </select>
+        <select onchange="modify(this.value)" id="">
+            <option value="1">fruits</option>
+            <option value="2">Vegetables</option>
+        </select>
+    </form>
+
+    <script>
+        function modify(x) {
+            var ol = document.forms.myform.op.options;
+            if (x == 1) {
+                ol[0].text = "kiwi";
+                ol[1].text = "banana";
+                ol[2].text = "apple";
+            }
+            else if (x == 2) {
+                ol[0].text = "tomato";
+                ol[1].text = "potato";
+                ol[2].text = "baigan";
+
+            }
+        }
+    </script>
+</body>
+
+</html>

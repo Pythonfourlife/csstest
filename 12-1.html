@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Object Example</title>
+    <script>
+        function navigateTo(url) {
+            // Navigate to the specified URL
+            window.location.href = url;
+        }
+
+        function goBack() {
+            // Go back in the browsing history
+            window.history.back();
+        }
+
+        function goForward() {
+            // Go forward in the browsing history
+            window.history.forward();
+        }
+
+        function showHistoryLength() {
+            // Display the number of entries in the browsing history
+            var historyLength = window.history.length;
+            alert("History Length: " + historyLength);
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="navigateTo('https://www.example.com')">Navigate to Example.com</button>
+    <button onclick="goBack()">Go Back</button>
+    <button onclick="goForward()">Go Forward</button>
+    <button onclick="showHistoryLength()">Show History Length</button>
+</body>
+
+</html>

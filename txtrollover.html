@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <table width="100%" border="2">
+    <tr valign="top">
+      <td width="50%">
+        <a href=""><img src="0.png" alt="Cover Image" width="1000vw" height="500vh" id="cover" /></a>
+      </td>
+      <td>
+        <a onmouseover="changeImage('0.png')"> <b>1st image</b></a><br />
+        <a onmouseover="changeImage('1.png')"> <b>2nd image</b></a><br />
+        <a onmouseover="changeImage('2.png')"> <b>3rd image</b></a><br />
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <script>
+    function changeImage(imageSrc) {
+      document.getElementById('cover').src = imageSrc;
+    }
+  </script>
+</body>
+
+</html>

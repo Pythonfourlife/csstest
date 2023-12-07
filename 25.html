@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Validation</title>
+</head>
+
+<body>
+    <form action="" name="myForm" onsubmit="return validate();">
+        Name:<input type="text" id="Name" name="Name" required /><br><br>
+
+        Email:<input type="email" id="EMail" name="EMail" required /><br><br>
+
+        <input type="submit" value="Submit" />
+    </form>
+    <script type="">
+        function validate() {
+            if (document.myForm.Name.value == "") {
+                alert("Please provide your name!");
+                document.myForm.Name.focus();
+                return false;
+            }
+            if (document.myForm.EMail.value == "") {
+                alert("Please provide your Email!");
+                document.myForm.EMail.focus();
+                return false;
+            }
+    
+            var emailID = document.myForm.EMail.value;
+            atpos = emailID.indexOf("@");
+            dotpos = emailID.lastIndexOf(".");
+    
+            if (atpos < 1 || (dotpos - atpos < 2)) {
+                alert("Please enter correct email ID")
+                document.myForm.EMail.focus();
+                return false;
+            }
+    
+            return true;
+        }
+    </script>
+</body>
+
+</html>
+
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Basic Array of Objects Sorting</title>
+</head>
+
+<body>
+    <script>
+        // Define array of objects
+        var people = [
+            { name: "Alice", age: 25 },
+            { name: "Bob", age: 30 },
+            { name: "Charlie", age: 22 }
+        ];
+
+        // Sort array of objects based on age
+        people.sort(function (a, b) {
+            return a.age - b.age;
+        });
+
+        // Display sorted array
+        document.write("Sorted People:");
+        for (var i = 0; i < people.length; i++) {
+            document.write(`<br>${people[i].name}: ${people[i].age}`);
+        }
+    </script>
+</body>
+
+</html>

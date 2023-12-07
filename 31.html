@@ -1,0 +1,31 @@
+<html>
+
+<body>
+    <script>
+        function modify(x) {
+            var optionList = document.forms.myform.optionList.options;
+
+            if (x == 1) {
+                optionList[0].text = "kiwi";
+                optionList[1].text = "Pineapple";
+                optionList[2].text = "Apple";
+            } else if (x == 2) {
+                optionList[0].text = "Tomato";
+                optionList[1].text = "Onion";
+                optionList[2].text = "Cabbage";
+            }
+        }
+    </script>
+    <form name="myform">
+        <select name="optionList">
+            <option value="1">kiwi</option>
+            <option value="2">Pineapple</option>
+            <option value="3">Apple</option>
+        </select>
+        <input type="radio" name="grp1" value=1 checked="true" onclick="modify(this.value)">Fruits
+        <input type="radio" name="grp1" value=2 onclick="modify(this.value)">Vegetables
+
+    </form>
+</body>
+
+</html>

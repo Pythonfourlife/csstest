@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Validation</title>
+</head>
+
+<body>
+    <form action="" name="myForm" onsubmit="return validateForm()">
+
+        Name <input type="text" name="Name" id="Name" required><br>
+
+        Email <input type="email" name="EMail" id="EMail" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validateForm() {
+            if (!myForm.Name.checkValidity()) {
+                alert("Please provide your name!");
+                myForm.Name.focus();
+                return false;
+            }
+
+            if (!myForm.EMail.checkValidity()) {
+                alert("Please enter a valid email address");
+                myForm.EMail.focus();
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+
+</html>

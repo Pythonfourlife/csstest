@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <form name="myForm" onsubmit="return validate(this)">
+    Select your Site:
+    <select name="myOpt">
+      <option value="">Fruits Name</option>
+      <option value="0">Banana 🍌</option>
+      <option value="1">Chikoo</option>
+      <option value="2">Apple</option>
+      <option value="3">Apricot</option>
+      <option value="4">Plum</option>
+      <option value="5">Peach 🍑</option>
+    </select>
+    <input type="submit" />
+    <input type="reset" />
+  </form>
+
+  <script>
+    function validate(form) {
+      var choice = form.myOpt.selectedIndex;
+      if (choice == "") {
+        alert("Please select a fruit.");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+
+</html>

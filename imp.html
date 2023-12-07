@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script>
+        var arr = new Array('1.png', '2.png', '3.png');
+        var counter = 0;
+        function dis(num) {
+            counter = counter + num;
+            if (counter > arr.lnegth - 1) {
+                counter = 0;
+
+            }
+            if (counter < 0) {
+                counter = arr.length - 1;
+            }
+            document.getElementById("slide").src = arr[counter];
+        }
+    </script>
+</head>
+
+<body>
+    <img src="1.png" id="slide">
+    <br>
+    <input type="button" value="previous" onclick="dis(1)">
+    <input type="button" value="next" onclick="dis(-1)">
+</body>
+
+</html>

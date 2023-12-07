@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <script>
+        function changeImage(imageNumber) {
+            document.getElementById('cover').src = imageNumber;
+        }
+    </script>
+</head>
+
+<body>
+    <a>
+        <img id="cover" height="92" src="1.png" width="70" border="0" name="cover">
+    </a>
+    <br>
+    <a onmouseover="changeImage('1.png')">
+        <b><u>1</u></b>
+    </a>
+    <br>
+    <a onmouseover="changeImage('2.png')">
+        <b><u>2</u></b>
+    </a>
+    <br>
+    <a onmouseover="changeImage('3.png')">
+        <b><u>3</u></b>
+    </a>
+</body>
+
+</html>

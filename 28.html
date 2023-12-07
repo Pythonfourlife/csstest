@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window with Frames</title>
+    <script>
+        function openWindow() {
+            // Create a new window
+            var childWindow = window.open('', '_blank', 'width=400,height=200');
+
+            // Set the content of the first frame
+            childWindow.document.write('<html><head><title>Frame 1</title></head><body><button onclick="openImage()">Click here!</button></body></html>');
+            childWindow.document.close();
+
+            // Function to open an image in the second frame
+            childWindow.openImage = function () {
+                childWindow.frames[1].document.write('<html><head><title>Frame 2</title></head><body><img src="https://example.com/path/to/your/image.jpg" alt="Image"></body></html>');
+                childWindow.frames[1].document.close();
+            };
+        }
+    </script>
+</head>
+
+<body>
+
+    <button onclick="openWindow()">Open Window</button>
+
+</body>
+
+</html>

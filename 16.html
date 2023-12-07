@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <input type="text" id="cookieValue" placeholder="Enter Cookie Value">
+    <input type="button" value="Set Cookie" onclick="createCookie()">
+    <input type="button" value="Get Cookie" onclick="readCookie()">
+    <input type="button" value="Update Cookie" onclick="updateCookie()">
+    <input type="button" value="Delete Cookie" onclick="deleteCookie()">
+
+    <script>
+        function createCookie() {
+            var cookieValue = document.getElementById("cookieValue").value;
+            if (cookieValue) {
+                document.cookie = "username=" + cookieValue;
+            } else {
+                alert("Please enter a cookie value.");
+            }
+        }
+
+        function readCookie() {
+            var x;
+            if (document.cookie == "") {
+                x = "No cookies available.";
+            } else {
+                x = document.cookie;
+            }
+            alert(x);
+        }
+
+        function updateCookie() {
+            var x = prompt("What u want to update the cookie to");
+            if (x) {
+                document.cookie = "username=" + x;
+            } else {
+                alert("Please enter a cookie value.");
+            }
+        }
+
+
+
+        function deleteCookie() {
+            document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+        }
+    </script>
+</body>
+
+</html>

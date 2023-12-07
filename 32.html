@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <td>Nmae</td>
+            <td><input type="text" id="nm" required></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" id="em" required></td>
+
+        </tr>
+        <tr>
+            <td>Pincode</td>
+            <td><input type="number" id="pn" required></td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+                <input type="submit" name="" id="" value="Submit" onclick="vlaidate()">
+            </td>
+        </tr>
+
+    </table>
+    <script>
+        function vlaidate() {
+
+            var pattern = /^[4]{1}[0-9]{5}$/;
+            var pin = document.getElementById("pn").value;
+            if (pattern.test(pin)) {
+                alert("Pin code is right ");
+            }
+            else {
+                alert("wrong pin code ");
+            }
+        }
+    </script>
+</body>
+
+</html>

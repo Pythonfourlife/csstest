@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function evaluateSelection() {
+            var ch = document.getElementsByName("checkbox");
+            for (var i = 0; i < ch.length; i++) {
+                if (ch[i].checked) {
+                    alert(ch[i] + "I wht you selected")
+                }
+                else {
+                    alert("No fruits selected.");
+                }
+
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <label><input type="checkbox" name="fruits" value="Apple"> Apple</label>
+    <label><input type="checkbox" name="fruits" value="Banana"> Banana</label>
+    <label><input type="checkbox" name="fruits" value="Orange"> Orange</label>
+
+    <button onclick="evaluateSelection();">Evaluate Selection</button>
+
+</body>
+
+</html>

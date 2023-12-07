@@ -1,0 +1,29 @@
+<html>
+
+<body>
+    Name: <input type="text" id="myText">
+    <p>Click the buttons to enable/disable the text field.</p>
+    <button onclick="enableField()">
+        Enable
+    </button>
+    <button onclick="disableField()">
+        Disable
+    </button>
+    <script>
+        var txt = document.getElementById("myText");
+
+        function enableField() {
+            if ('disabled' in txt) {
+                txt.disabled = false;  
+            }
+        }
+
+        function disableField() {
+            if ('disabled' in txt) {
+                txt.disabled = true;
+            }
+        }
+    </script>
+</body>
+
+</html>

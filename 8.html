@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Count Vowels in String</title>
+</head>
+
+<body>
+    <script>
+        function countVowels(str) {
+            var count = 0;
+            var vowels = "AEIOUaeiou";
+
+            for (var i = 0; i < str.length; i++) {
+                if (vowels.indexOf(str[i]) !== -1) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        var inputString = "Hello, how are you?";
+        var vowelCount = countVowels(inputString);
+
+        document.write(`The number of vowels in the string is: ${vowelCount}`);
+    </script>
+</body>
+
+</html>
