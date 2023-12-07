@@ -1,50 +1,39 @@
 <!DOCTYPE html>
 <html>
 
-<head></head>
+<head>
+    <title>College Admission Form</title>
+</head>
 
 <body>
-    <input type="text" id="cookieValue" placeholder="Enter Cookie Value">
-    <input type="button" value="Set Cookie" onclick="createCookie()">
-    <input type="button" value="Get Cookie" onclick="readCookie()">
-    <input type="button" value="Update Cookie" onclick="updateCookie()">
-    <input type="button" value="Delete Cookie" onclick="deleteCookie()">
+    <h1>College Admission Form</h1>
+    <form>
+        Full Name:<input type="text" id="fn" name="fn" required><br><br>
 
-    <script>
-        function createCookie() {
-            var cookieValue = document.getElementById("cookieValue").value;
-            if (cookieValue) {
-                document.cookie = "username=" + cookieValue;
-            } else {
-                alert("Please enter a cookie value.");
-            }
-        }
+        Date of Birth:<input type="date" id="dob" name="dob" required><br><br>
 
-        function readCookie() {
-            var x;
-            if (document.cookie == "") {
-                x = "No cookies available.";
-            } else {
-                x = document.cookie;
-            }
-            alert(x);
-        }
+        Email:<input type="em" id="em" name="em" required><br><br>
 
-        function updateCookie() {
-            var x = prompt("What u want to update the cookie to");
-            if (x) {
-                document.cookie = "username=" + x;
-            } else {
-                alert("Please enter a cookie value.");
-            }
-        }
+        phone Number:<input type="tel" id="ph" name="ph" required><br><br>
 
+        Gender:<input type="radio" id="male" name="gender" value="male">
+        Male
+        <input type="radio" id="female" name="gender" value="female">
+        Female<br><br>
 
+        Course:
+        <select id="course" name="course" required>
+            <option value="engineering">Engineering</option>
+            <option value="business">Business Administration</option>
+            <option value="arts">Arts</option>
+            <option value="science">Science</option>
+        </select><br><br>
 
-        function deleteCookie() {
-            document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-        }
-    </script>
+        Comments:<br>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
 </body>
 
 </html>

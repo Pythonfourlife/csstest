@@ -1,24 +1,32 @@
 <html>
 
-<head>
-    <title> Fibonacci Series in JavaScript </title>
-</head>
-
 <body>
     <script>
-        // declaration of the variables  
-        var n1 = 0, n2 = 1, next_num, i;
-        var num = parseInt(prompt(" Enter the limit for Fibonacci Series "));
-        document.write("Fibonacci Series: ");
-        for (i = 1; i <= num; i++) {
-            document.write(" <br> " + n1); // print the n1  
-            next_num = n1 + n2; // sum of n1 and n2 into the next_num  
+        function modify(x) {
+            var optionList = document.forms.myform.optionList.options;
 
-            n1 = n2; // assign the n2 value into n2  
-            n2 = next_num; // assign the next_num into n2  
+            if (x == 1) {
+                optionList[0].text = "kiwi";
+                optionList[1].text = "Pineapple";
+                optionList[2].text = "Apple";
+            } else if (x == 2) {
+                optionList[0].text = "Tomato";
+                optionList[1].text = "Onion";
+                optionList[2].text = "Cabbage";
+            }
         }
-
     </script>
+    <form name="myform">
+        <select name="optionList">
+            <option value="1">kiwi</option>
+            <option value="2">Pineapple</option>
+            <option value="3">Apple</option>
+        </select>
+        <select onchange="modify(this.value)">
+            <option value="1">Fruits</option>
+            <option value="2">Vegetables</option>
+        </select>
+    </form>
 </body>
 
 </html>

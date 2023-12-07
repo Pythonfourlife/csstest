@@ -1,23 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Check First Character Case</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Example</title>
+    <script>
+        function evaluateSelection() {
+            var checkboxes = document.getElementsByName("fruits");
+            var selectedFruits = [];
+
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    selectedFruits.push(checkboxes[i].value);
+                }
+            }
+
+            if (selectedFruits.length > 0) {
+                alert("Selected fruits: " + selectedFruits.join(", "));
+            } else {
+                alert("No fruits selected.");
+            }
+        }
+    </script>
 </head>
 
 <body>
-    <script>
-        function upp(str) {
-            return str[0] === str[0].toUpperCase();
-        }
+    <label><input type="checkbox" name="fruits" value="Apple"> Apple</label>
+    <label><input type="checkbox" name="fruits" value="Banana"> Banana</label>
+    <label><input type="checkbox" name="fruits" value="Orange"> Orange</label>
 
-        var inputString = "Hello";
-        if (upp(inputString)) {
-            document.write("The first character is uppercase.");
-        } else {
-            document.write("The first character is not uppercase.");
-        }
-    </script>
+    <button onclick="evaluateSelection();">Evaluate Selection</button>
 </body>
 
 </html>

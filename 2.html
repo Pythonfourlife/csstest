@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
 
 <head>
     <title>Document</title>
@@ -6,20 +6,54 @@
 
 <body>
     <script>
-        var reverseString = function (st) {
-            var newString = "";
-            for (let i = st.length - 1; i >= 0; i--) {
-                newString += st[i];
-            }
-            return newString;
-        }
-        var str = prompt("Enter a string: ");
-        const result = reverseString(str);
-        if (str == result) {
-            document.write("Yes it is palindrome ")
-        } else {
-            document.write("No  it is not a  palindrome ")
-        }
+        // Creating an array
+        var myArray = [1, 2, 3, 4, 5];
+
+        // Displaying the original array
+        document.write("Original Array: " + myArray + "<br>");
+
+        // Adding elements to the end of the array
+        myArray.push(6, 7);
+        document.write("After push(): " + myArray + "<br>");
+
+        // Removing the last element
+        myArray.pop();
+        document.write("After pop(): " + myArray + "<br>");
+
+        // Adding elements to the beginning of the array
+        myArray.unshift(-2);
+        document.write("After unshift(): " + myArray + "<br>");
+
+        // Removing the first element
+        myArray.shift();
+        document.write("After shift(): " + myArray + "<br>");
+
+        // Finding the index of an element
+        var index = myArray.indexOf(3);
+        document.write("Index of 3: " + index + "<br>");
+
+        // Removing elements by index
+        myArray.splice(index, 2);
+        document.write("After splice(): " + myArray + "<br>");
+
+        // Reversing the array
+        myArray.reverse();
+        document.write("After reverse(): " + myArray + "<br>");
+
+        // Displaying the original array
+        document.write("Original Array: " + myArray + "<br>");
+
+        // Ascending sorting without using slice
+        myArray.sort(function (a, b) {
+            return a - b;
+        });
+        document.write("Ascending Sort (Original Array Modified): " + myArray + "<br>");
+
+        // Descending sorting without using slice
+        myArray.sort(function (a, b) {
+            return b - a;
+        });
+        document.write("Descending Sort (Original Array Modified): " + myArray + "<br>");
     </script>
 </body>
 

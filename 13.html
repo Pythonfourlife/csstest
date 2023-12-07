@@ -1,23 +1,38 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Array</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegExp Example</title>
+    <script>
+        function testRegExp() {
+            var inputText = document.getElementById("textInput").value;
+
+            // Match digits
+            var digitPattern = /\d/;
+            var containsDigit = digitPattern.test(inputText);
+
+            // Match non-digits
+            var nonDigitPattern = /\D/;
+            var containsNonDigit = nonDigitPattern.test(inputText);
+
+            // Match the word "hamza" with optional digits before and after it
+            var wordPattern = /\b\d*hamza\d*\b/i; // Adding \d* allows for zero or more digits before and after "hamza", and the "i" makes it case-insensitive
+            var containsHamza = wordPattern.test(inputText);
+
+            // Display the results
+            document.write("Contains Digit: " + containsDigit + "<br>");
+            document.write("Contains Non-Digit: " + containsNonDigit + "<br>");
+            document.write("Contains 'hamza': " + containsHamza + "<br>");
+        }
+    </script>
 </head>
 
 <body>
-    <script>
-        var arr = new Array();
-        arr.push(5, 6, 7, 8, 9);
-        document.write("After join method = " + arr.join());
-        arr.pop();
-        document.write("<br>After pop method = " + arr.join());
-        arr.shift();
-        document.write("<br>After shift method = " + arr.join());
-        arr.reverse();
-        document.write("<br>After reverse method =  " + arr.join());
-        arr.unshift(5);
-        document.write("<br>After unshift method = " + arr.join());
-    </script>
+    <label for="textInput">Enter Text:</label>
+    <input type="text" id="textInput">
+    <button onclick="testRegExp()">Test RegExp</button>
 </body>
 
 </html>

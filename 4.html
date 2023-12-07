@@ -1,41 +1,57 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Simple Calculator</title>
+    <title>Document</title>
+    <script>
+        // Creating a string
+        var myString = "Hello, World!";
+
+        // Displaying the original string
+        document.write("Original String: " + myString + "<br>");
+
+        // Method 1: length
+        var length = myString.length;
+        document.write("1. Length: " + length + "<br>");
+
+        // Method 2: toUpperCase
+        var upperCaseString = myString.toUpperCase();
+        document.write("2. To Upper Case: " + upperCaseString + "<br>");
+
+        // Method 3: toLowerCase
+        var lowerCaseString = myString.toLowerCase();
+        document.write("3. To Lower Case: " + lowerCaseString + "<br>");
+
+        // Method 4: indexOf
+        var indexOfWorld = myString.indexOf("World");
+        document.write("4. Index of 'World': " + indexOfWorld + "<br>");
+
+        // Method 5: slice
+        var slicedString = myString.slice(7, 12);
+        document.write("5. Slice (7-12): " + slicedString + "<br>");
+
+        // Method 6: replace
+        var replacedString = myString.replace("World", "Universe");
+        document.write("6. Replace 'World' with 'Universe': " + replacedString + "<br>");
+
+        // Method 7: charAt
+        var charAtIndex = myString.charAt(7);
+        document.write("7. Character at index 7: " + charAtIndex + "<br>");
+
+        // Method 8: concat
+        var concatString = myString.concat(" Have a nice day!");
+        document.write("8. Concatenation: " + concatString + "<br>");
+
+        // Method 9: substr
+        var substrString = myString.substr(7, 5);
+        document.write("9. Substring (start at 7, length 5): " + substrString + "<br>");
+
+        // Method 10: split
+        var splitArray = myString.split(", ");
+        document.write("10. Splitting into an array: " + splitArray + "<br>");
+    </script>
 </head>
 
 <body>
-    <script>
-        // Predefined values
-        var num1 = parseFloat(prompt("Enter n1 "));
-        var operator = prompt("enter the operaotr ");
-        var num2 = parseFloat(prompt("Enter n2 "));
-        var result;
-
-        // Perform calculation based on the operator
-        switch (operator) {
-            case '+':
-                result = num1 + num2;
-                break;
-            case '-':
-                result = num1 - num2;
-                break;
-            case '*':
-                result = num1 * num2;
-                break;
-            case '/':
-                result = num1 / num2;
-                break;
-            default:
-                document.write("Invalid operator.");
-        }
-
-        // Display the result
-        if (result) {
-            document.write(`Result: ${num1} ${operator} ${num2} = ${result}`);
-        }
-    </script>
 </body>
 
 </html>

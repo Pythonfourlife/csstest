@@ -1,20 +1,16 @@
-<!DOCTYPE html>
 <html>
 
-<head>
-    <title>Calling a Function from HTML</title>
-    <script>
-        // JavaScript function
-        function greet() {
-            alert("Hello, World!");
-        }
-    </script>
-</head>
-
 <body>
-    <h1>Click the button to greet!</h1>
-    <!-- Call the JavaScript function when the button is clicked -->
-    <button onclick="greet()">Greet</button>
+    <script>
+
+        location = location.href + "#frag";
+        document.write("Href" + location.href);
+        document.write("<br>Protocol" + location.protocol);
+        document.write("<br>Host" + location.host);
+        document.write("<br>Path" + location.pathname);
+        document.write("<br>hash" + location.hash);
+
+    </script>
 </body>
 
-</html>
+</html

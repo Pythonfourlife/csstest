@@ -6,13 +6,47 @@
 
 <body>
     <script>
-        var accept = function (str) {
-            var a = str.length;
-            return a;
+        // For loop
+        document.write("For Loop: ");
+        for (var i = 1; i <= 5; i++) {
+            document.write(i + " ");
         }
-        var b = prompt("Enter a string ")
-        document.write("Length of string is " + accept(b));
+        document.write("<br>");
 
+        // While loop
+        document.write("While Loop: ");
+        var j = 1;
+        while (j <= 5) {
+            document.write(j + " ");
+            j++;
+        }
+        document.write("<br>");
+
+        // Do-while loop
+        document.write("Do-While Loop: ");
+        var k = 1;
+        do {
+            document.write(k + " ");
+            k++;
+        } while (k <= 5);
+        document.write("<br>");
+
+        // Decision-making statements
+        var number = parseInt(prompt("Enter a number: "));
+
+        if (number) {
+            document.write("Entered number is a valid number. <br>");
+        } else {
+            document.write("Invalid input. Please enter a number. <br>");
+        }
+
+        if (number > 0) {
+            document.write("Entered number is positive. <br>");
+        } else if (number < 0) {
+            document.write("Entered number is negative. <br>");
+        } else {
+            document.write("Entered number is zero. <br>");
+        }
     </script>
 </body>
 

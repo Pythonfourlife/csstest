@@ -1,32 +1,35 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Unicode Converter</title>
+    <title>Document</title>
+    <script>
+        // Function with argument
+        function greet(name) {
+            alert("Hello, " + name + "!");
+        }
+
+        // Function without argument
+        function sayHello() {
+            alert("Hello, there!");
+        }
+
+        // Function called from HTML onload
+        function onLoadFunction() {
+            alert("Page is loaded!");
+        }
+
+        // Function calling another function
+        function callFunctions() {
+            sayHello(); // Calling function without argument
+            var nm = prompt("Enter the name");
+            greet(nm); // Calling function with argument
+        }
+    </script>
 </head>
 
-<body>
-    <script>
-        // Convert character to Unicode code point
-        var charToUnicode = function (character) {
-            return character.charCodeAt(0);
-        }
-
-        // Convert Unicode code point to character
-        var unicodeToChar = function (codePoint) {
-            return String.fromCodePoint(codePoint);
-        }
-
-        // Example: Convert character to Unicode code point
-        var character = 'A';
-        var codePoint = charToUnicode(character);
-        document.write("Character " + character + " is represented by Unicode code point " + codePoint);
-
-        // Example: Convert Unicode code point to character
-        var newCodePoint = 69; // Unicode code point for 'A'
-        var newCharacter = unicodeToChar(newCodePoint);
-        document.write("Unicode code point " + newCodePoint + " represents character " + newCharacter);
-    </script>
+<body onload="onLoadFunction();">
+    <!-- Button to call functions -->
+    <button onclick="callFunctions();">Call Functions</button>
 </body>
 
 </html>
